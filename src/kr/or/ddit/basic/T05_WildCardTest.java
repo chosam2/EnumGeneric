@@ -13,8 +13,10 @@ import java.util.List;
  ※ 와일드카드와 타입파라미터의 특징:
 1. 동일한 파라미터 타입으로 강제하고 싶은 경우.
    (타입 파라미터가 한개만 사용될 경우에는 둘 중 아무거나 사용해도 동일함)
-ex) public static <T extends Number> void copy(List<T> dest, List<T> src) => 메서드의 파라미터타입을 동일한 타입으로 강제함.
-    public static void copy(List<? extends Number> dest, List<? extends Number> src) => 동일 타입으로 강제하지 않음.(unsafe type)
+ex) public static <T extends Number> void copy(List<T> dest, List<T> src) // src를 복사해서 dest로 붙히는 메서드. 
+	=> 메서드의 파라미터타입을 동일한 타입으로 강제함. (제한된 타입 파라미터)
+    public static void copy(List<? extends Number> dest, List<? extends Number> src)
+    => 동일 타입으로 강제하지 않음.(unsafe type) => 들어오는 타입이 자유로움(융통성있음)
 
 2. Type parameters 는 하한 제한만 가능 (와일드 카드는 상한, 하한 가능)
 ex) public void print(List<? super Integer> list)  // OK

@@ -1,6 +1,7 @@
 package kr.or.ddit.basic;
 
-public class T02_EnumTest {
+// 이늄을 사용하면 타입까지 지정할 수 있다.
+public class T02_EnumTest {	
 	/*
 		열거형 => 상수값들을 선언하는 방법
 		

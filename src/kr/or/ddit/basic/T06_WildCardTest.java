@@ -9,18 +9,18 @@ import java.util.Arrays;
  */
 public class T06_WildCardTest {
 
-	// 모든 과정등록
+	// 모든 과정등록한 수강생 목록 조회
 	public static void registerCourse(Course<?> course) {
 		System.out.println(course.getName() + "수강생 : " + Arrays.toString(course.getStudents()));
 	}
 
-	// 학생 과정 등록
+	// 학생 과정 등록한 수강생 목록 조회
 	public static void registerCourseStudent(Course<? extends Student> course) {
 		System.out.println(course.getName() + "수강생 : " + Arrays.toString(course.getStudents()));
 	}
 
-	// 직장인 과정 등록
-	public static void registerCourseWorker(Course<? super Worker> course) {
+	// 직장인 과정 등록한 수강생 목록 조회
+	public static void registerCourseWorker(Course<? super Worker> course) {	// super란? 자신을 포함한 조상들
 		System.out.println(course.getName() + "수강생 : " + Arrays.toString(course.getStudents()));
 	}
 
